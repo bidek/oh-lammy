@@ -1,0 +1,17 @@
+= oh lammy - explain your selection with ollama power
+
+== Installation
+
+before going to the extension store (if ever?), unfortunately you have to install it like a developer. but don't worry it's not difficult. Select `Extension Management` -> toggle `Developer Mode` -> click `Load unpacked`. Now choose directory with extension.
+
+The default configuration points to `http://localhost:11434`, so if there is no need to change, all you need to do is refresh the model list and You can select the text.
+
+== Usage
+
+Select text on webpage, open context menu and choose `oh lammy`. When You click on one of submenu items, window should appear with AI explanation.
+
+In configuration panel you can add your own *prompts*.
+
+== Inspiration
+
+Extension is strongly inspired by https://github.com/welniak/llama-explain. Ollama client code is basically from there. Project seams abandon so i hack this little, buggy thing to wipe my tears. Opinions, contributions. suggestions etc. highly recommended.
