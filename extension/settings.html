@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <title>oh-lammy settings</title>
+</head>
+<style>
+    body {
+        min-width: 500px;
+    }
+</style>
+<body>
+
+
+<body>
+
+<!-- Begin page content -->
+<main role="main" class="container-fluid">
+
+    <div class="row" id="error">
+        <h3 class="mt-1" id="errorMessage">error msg placeholder</h3>
+    </div>
+
+    <div class="row mt-3">
+        <h1>Configuration:</h1>
+    </div>
+
+    <div class="row">
+        <div class="mb-3">
+            <label for="ollamaURL" class="form-label">Ollama URL</label>
+            <input class="form-control" id="ollamaURL">
+        </div>
+    </div>
+
+
+    <div class="input-group mb-3">
+        <select name="models" id="modelSelect" class="form-select form-select-sm">
+            <!--                <option value="">&#45;&#45; Select model &#45;&#45;</option>-->
+        </select>
+        <div class="input-group-append">
+            <button id="refreshModelsButton" class="btn-sm btn-success" type="button">Refresh</button>
+        </div>
+    </div>
+
+
+<!--    <div class="row">-->
+<!--        <div class="mb-3">-->
+<!--            <label for="modelSelect" class="form-label">Choose a model:</label>-->
+<!--            <select name="models" id="modelSelect" class="form-select form-select-sm">-->
+<!--                &lt;!&ndash;                <option value="">&#45;&#45; Select model &#45;&#45;</option>&ndash;&gt;-->
+<!--            </select>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="row">-->
+<!--        <div class="mb-3 text-end">-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+
+    <div class="row" id="empty-prompt-list">
+        <div class="mb-3">
+            <h2>No prompts currently added</h2>
+        </div>
+    </div>
+
+
+    <div class="row" id="prompt-list">
+        <div class="mb-3">
+            <h2>Prompt list:</h2>
+            <table id="promptTable" class="table table-borderless">
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="mb-3">
+            <h2>Add new prompts</h2>
+            <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control" placeholder="Hey Ollama, explain like im 5:" id="promptInput">
+                <div class="input-group-append">
+                    <button class="btn-sm btn-success" type="button" id="saveButton">Add</button>
+                </div>
+            </div>
+            <footer class="blockquote-footer">Prompt will be send as: [prompt] [selection]</footer>
+<!--            <p><small>This line of text is meant to be treated as fine print.</small></p>-->
+        </div>
+    </div>
+<!--    <div class="row">-->
+<!--        <p class="text-muted">Prompt will be send to llm model as `[prompt] [selected-text]`</p>-->
+<!--    </div>-->
+
+
+
+
+
+</main>
+
+<!--<footer class="footer">-->
+<!--    <div class="container">-->
+<!--        <span class="text-muted">oh lammy thanks ollama mommy</span>-->
+<!--    </div>-->
+<!--</footer>-->
+</body>
+
+
+<script src="settings.js"></script>
+</body>
+</html>

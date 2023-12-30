@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "oh-lammy",
+  "version": "0.1",
+  "permissions": [
+    "notifications",
+    "contextMenus",
+    "windows",
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "settings.html"
+  },
+  "icons": {
+    "48": "ollama.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

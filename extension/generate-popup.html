@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
+    <title>oh lammy</title>
+</head>
+
+<body>
+
+
+<main role="main" class="container mt-5">
+
+    <div class="row">
+        <div class="mx-auto">
+            <h2 class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample" id="title">
+                Click to Toggle Collapse
+            </h2>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <!-- Content inside the collapse -->
+                    <p id="selection"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <span id="spinner">Loading...</span>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <span id="explanationSpan"></span>
+    </div>
+
+
+</main>
+</body>
+<script src="generate-popup.js"></script>
+<script src="libs/marked.min.js"></script>
+<script src="libs/bootstrap.bundle.min.js"></script>
+
+</html>
