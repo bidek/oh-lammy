@@ -53,7 +53,8 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
             let prompt = info.menuItemId
 
             if (model && model.length > 0) {
-                let text = prompt + " " + selection;
+                // let text = prompt + " " + selection;
+                let text = prepareText(prompt, selection);
 
                 chrome.windows.create({
                     url: chrome.runtime.getURL('generate-popup.html'),
@@ -87,6 +88,19 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
     }
 });
 
+
+function prepareText(prompt, selection) {
+    let finalText;
+    if(prompt.indexOf("[selection]") !== -1) {
+        // repleace [selection] with selection
+        finalText = prompt.replace("[selection]", selection);
+    } else {
+        // append selection to prompt
+        finalText = prompt + "  " + selection;
+    }
+
+    return finalText;
+}
 
 function recreateContextMenu(prompts) {
     chrome.contextMenus.removeAll()
