@@ -32,6 +32,9 @@ class OllamaClient {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
+                options: {
+                  num_ctx: 4096 * 4
+                },
                 model: model,
                 prompt: text
             })
