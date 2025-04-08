@@ -64,10 +64,11 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
                 }, function (window) {
                     let popupTabId = window.tabs[0].id
 
-                    ollamaClient.callGenerate(model, text, (data) => {
+                    ollamaClient.callGenerate(model, text, (data, isDone) => {
                         chrome.tabs.sendMessage(popupTabId, {
                             type: "stream",
                             data: data,
+                            isDone: isDone,
                             prompt: prompt,
                             selection: selection
                         });

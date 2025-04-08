@@ -41,8 +41,9 @@ class OllamaClient {
         }).then(async response => {
             await this.parseGenerateResponse(response, parsedResponse => {
                 let word = parsedResponse.response
+                let isDone = parsedResponse.done;
                 if (word !== undefined) {
-                    callback(word)
+                    callback(word, isDone)
                 }
             })
         }).catch(error => {

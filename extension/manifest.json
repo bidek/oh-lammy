@@ -8,7 +8,8 @@
     "windows",
     "tabs",
     "activeTab",
-    "storage"
+    "storage",
+    "downloads"
   ],
   "background": {
     "service_worker": "background.js"
